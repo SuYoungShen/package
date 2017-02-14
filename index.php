@@ -23,41 +23,45 @@
      ?>
   </head>
   <body>
-    <form class="form-horizontal" role="form" action="action/insert.php" method="post">
-      <!--Recipient收件人-->
-      <div class="form-group">
-        <label for="Recipient" class="col-sm-2 control-label">收件人</label>
-        <div class="col-sm-5">
-          <input type="text" class="form-control" name="Recipient" id="Recipient" placeholder="輸入收件人">
+    <div class="container-fluid">
+      <form class="form-horizontal" role="form" action="action/insert.php" method="post">
+        <!--Recipient收件人-->
+        <div class="form-group">
+          <label for="Recipient" class="col-sm-2 control-label">收件人</label>
+          <div class="col-sm-5">
+            <input type="text" class="form-control" name="Recipient" id="Recipient" placeholder="輸入收件人">
+          </div>
         </div>
-      </div>
-      <!--Recipient收件人-->
-      <!-- Address 地址-->
-      <div class="form-group">
-        <label for="Address" class="col-sm-2 control-label">輸入寄件人地址</label>
-        <div class="col-sm-5">
-          <input type="text" class="form-control" name="Address" id="Address" placeholder="輸入寄件人地址">
+        <!--Recipient收件人-->
+        <!-- Address 地址-->
+        <div class="form-group">
+          <label for="Address" class="col-sm-2 control-label">輸入寄件人地址</label>
+          <div class="col-sm-5">
+            <input type="text" class="form-control" name="Address" id="Address" placeholder="輸入寄件人地址">
+          </div>
         </div>
-      </div>
-      <!-- Address 地址-->
-      <!-- Number 郵件號碼-->
-      <div class="form-group">
-        <label for="Number" class="col-sm-2 control-label">函件號碼</label>
-        <div class="col-sm-5">
-          <input type="text" class="form-control" name="Number" id="Number" placeholder="函件號碼">
+        <!-- Address 地址-->
+        <!-- Number 郵件號碼-->
+        <div class="form-group">
+          <label for="Number" class="col-sm-2 control-label">函件號碼</label>
+          <div class="col-sm-5">
+            <input type="text" class="form-control" name="Number" id="Number" placeholder="函件號碼">
+          </div>
         </div>
-      </div>
-      <!-- Number 郵件號碼-->
-      <div class="form-group">
-        <div class="col-sm-offset-2 col-sm-10">
-          <button type="submit" id="submit" class="btn btn-default">送出</button>
-          <a href="show.php">
-            <button type="button" class="btn btn-default">搜尋</button>
-          </a>
-          <!-- <button type="submit" name="de" class="btn btn-default">刪除資料庫全部資料</button> -->
+        <!-- Number 郵件號碼-->
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" id="submit" class="btn btn-default">送出</button>
+            <a href="show.php">
+              <button type="button" class="btn btn-default">搜尋</button>
+            </a>
+            <!-- <button type="submit" name="de" class="btn btn-default">刪除資料庫全部資料</button> -->
+          </div>
         </div>
-      </div>
-    </form>
+      </form>
+
+    </div>
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
     <!-- Include all compiled plugins (below), or include individual files as needed -->

@@ -30,7 +30,8 @@
       <form class="form-horizontal" role="form" method="get">
         <div class="form-group">
           <div class="dropdown">
-            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+            <button class="btn btn-default dropdown-toggle" type="button"
+                    id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
               選擇日期
               <span class="caret"></span>
             </button>
