@@ -54,9 +54,7 @@
           <a href="show.php">
             <button type="button" class="btn btn-default">搜尋</button>
           </a>
-          <form method="post" action="insert.php">
-            <button type="submit" name="de" class="btn btn-default">刪除</button>
-          </form>
+          <!-- <button type="submit" name="de" class="btn btn-default">刪除</button> -->
         </div>
       </div>
     </form>
