@@ -19,37 +19,69 @@
   </head>
   <body>
     <?php
-      include 'connect/connect.php';
-      $Recipient = $_POST["Recipient"];//收件人
+      include 'action/select.php';
      ?>
-    <div class="table-responsive">
-      <table class="table table-hover table-bordered">
-        <thead>
-          <tr>
-            <td>
+    <div class="container-fluid">
+      <form class="form-horizontal" role="form" method="get">
+        <div class="form-group">
+          <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+              選擇日期
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
               <?php
-                date_default_timezone_set('Asia/Taipei');//設定時間為台北
-                $datetime = date("Y-m-d");//時間
-                echo $datetime;
-              ?>
-            </td>
-            <td>收件人</td>
-            <td>寄件人地址</td>
-            <td>函件號碼</td>
-            <td>簽章</td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td></td>
-            <td><?php echo $Recipient; ?></td>
-            <td>ss</td>
-            <td>sss</td>
-            <td>sss</td>
-          </tr>
-        </tbody>
-      </table>
+                foreach ($DisDate as $key => $value) {
+                  $v = $value["datetime"];
+                  echo "
+                  <li role='presentation'>
+                    <a role='menuitem' tabindex='-1' href='show.php?datetime=$v'>$v</a>
+                  </li>
+                  ";
+                }
+               ?>
+            </ul>
+          </div>
+        </div>
+      </form>
+
+      <div class="table-responsive">
+        <table class="table table-hover table-bordered">
+          <thead>
+            <tr>
+              <td><?php echo $datetime; ?></td>
+              <td>收件人</td>
+              <td>寄件人地址</td>
+              <td>函件號碼</td>
+              <td>簽章</td>
+            </tr>
+          </thead>
+          <tbody>
+            <?php
+            foreach ($Display as $key => $value) {
+              $Recipient = $value["recipient"];//收件人
+              $Address = $value["address"];//地址
+              $Number = $value["number"];//函件號碼
+             ?>
+            <tr>
+              <td></td>
+              <td><?php echo $Recipient; ?></td>
+              <td><?php echo $Address; ?></td>
+              <td><?php echo $Number; ?></td>
+              <td></td>
+            </tr>
+            <?php
+              }
+             ?>
+          </tbody>
+        </table>
+        <a href="index.php"><button type="button" class="btn btn-default" name="button">返回</button></a>
+      </div>
     </div>
+
+    <?php
+      $db = null;
+     ?>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
