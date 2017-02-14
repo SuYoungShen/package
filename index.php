@@ -31,6 +31,7 @@
           <input type="text" class="form-control" name="Recipient" id="Recipient" placeholder="輸入收件人">
         </div>
       </div>
+      <!--Recipient收件人-->
       <!-- Address 地址-->
       <div class="form-group">
         <label for="Address" class="col-sm-2 control-label">輸入寄件人地址</label>
@@ -38,6 +39,7 @@
           <input type="text" class="form-control" name="Address" id="Address" placeholder="輸入寄件人地址">
         </div>
       </div>
+      <!-- Address 地址-->
       <!-- Number 郵件號碼-->
       <div class="form-group">
         <label for="Number" class="col-sm-2 control-label">函件號碼</label>
@@ -45,13 +47,7 @@
           <input type="text" class="form-control" name="Number" id="Number" placeholder="函件號碼">
         </div>
       </div>
-      <!-- Signature 簽章 -->
-      <!-- <div class="form-group">
-        <label for="Signature" class="col-sm-2 control-label">簽章</label>
-        <div class="col-sm-5">
-          <input type="text" class="form-control" id="Signature" placeholder="簽章">
-        </div>
-      </div> -->
+      <!-- Number 郵件號碼-->
       <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
           <button type="submit" id="submit" class="btn btn-default">送出</button>

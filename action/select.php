@@ -9,12 +9,14 @@
     $datetime = date("Y-m-d");//時間
   }
 
+  //以日期當條件,取得全部資料
   $Select = "SELECT * FROM package WHERE datetime='".$datetime."'";
   $Query = $db->query($Select);
   $Display = $Query->fetchAll();
+  //以日期當條件,取得全部資料
 
   //顯示日期
-  $SeDate = "SELECT datetime FROM package Group BY datetime";
+  $SeDate = "SELECT datetime FROM package GROUP BY datetime";
   $QuDate = $db->query($SeDate);
   $DisDate = $QuDate->fetchAll();
   //顯示日期
