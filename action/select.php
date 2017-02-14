@@ -14,7 +14,7 @@
   $Display = $Query->fetchAll();
 
   //顯示日期
-  $SeDate = "SELECT datetime FROM package WHERE 1";
+  $SeDate = "SELECT datetime FROM package Group BY datetime";
   $QuDate = $db->query($SeDate);
   $DisDate = $QuDate->fetchAll();
   //顯示日期

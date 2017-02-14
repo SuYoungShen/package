@@ -33,11 +33,13 @@
               <?php
                 foreach ($DisDate as $key => $value) {
                   $v = $value["datetime"];
-                  echo "
-                  <li role='presentation'>
-                    <a role='menuitem' tabindex='-1' href='show.php?datetime=$v'>$v</a>
-                  </li>
-                  ";
+                  if (!empty($v)) {
+                    echo "
+                    <li role='presentation'>
+                      <a role='menuitem' tabindex='-1' href='show.php?datetime=$v'>$v</a>
+                    </li>
+                    ";
+                  }
                 }
                ?>
             </ul>
