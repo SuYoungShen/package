@@ -20,6 +20,11 @@
   <body>
     <?php
       include 'action/select.php';
+
+      if (isset($_GET['action']) && $_GET["action"] == 'excel') {
+          header('Content-type:application/vnd.ms-excel');  //宣告網頁格式
+          header('Content-Disposition: attachment; filename=myexcel.xls');  //設定檔案名稱
+      }
      ?>
     <div class="container-fluid">
       <form class="form-horizontal" role="form" method="get">
@@ -77,7 +82,13 @@
              ?>
           </tbody>
         </table>
-        <a href="index.php"><button type="button" class="btn btn-default" name="button">返回</button></a>
+        <form class="form-horizontal" role="form">
+          <a href="index.php"><button type="button" class="btn btn-default" name="button">返回</button></a>
+          <button type="submit" name="action" value="excel" class="btn btn-default">匯出excel</button>
+          <a href="action/delete.php?detoday=yes">
+            <button type="button" class="pull-right btn btn-default" name="Detoday">刪除當天資料</button>
+          </a>
+        </form>
       </div>
     </div>
 

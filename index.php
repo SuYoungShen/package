@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
+    <title>包裹登記簿</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -54,7 +54,7 @@
           <a href="show.php">
             <button type="button" class="btn btn-default">搜尋</button>
           </a>
-          <!-- <button type="submit" name="de" class="btn btn-default">刪除</button> -->
+          <!-- <button type="submit" name="de" class="btn btn-default">刪除資料庫全部資料</button> -->
         </div>
       </div>
     </form>
